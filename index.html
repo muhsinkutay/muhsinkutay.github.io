@@ -7,7 +7,14 @@
 
 </head>
 <body>
-<audio hidden autoplay>
+<script>
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('askim').play();
+    document.removeEventListener('click', musicPlay);
+}
+</script>
+<audio id="askim" hidden>
   <source src="askim.mp3" type="audio/mpeg">
 </audio> 
 <!-- partial:index.partial.html -->
